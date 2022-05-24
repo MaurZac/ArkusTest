@@ -27,4 +27,8 @@ extension TableOnePresenter: TableOnePresenterProtocol {
 
 extension TableOnePresenter: TableOneInteractorOutputProtocol {
     // TODO: implement interactor output methods
+    func interPushDataPresenter(receivedData: [ArkaElement]) {
+        view?.presenterPushDataView(received: receivedData)
+    }
+    
 }

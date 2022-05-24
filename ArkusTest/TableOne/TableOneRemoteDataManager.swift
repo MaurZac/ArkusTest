@@ -14,12 +14,12 @@ class TableOneRemoteDataManager:TableOneRemoteDataManagerInputProtocol {
     
     func externalGetData() {
         print("externalRomateDM")
-        guard let url = URL(string: "https://cors.io/?http://www.mocky.io/v2/5bf3ce193100008900619966") else { return }
+        guard let url = URL(string: "http://www.mocky.io/v2/5bf3ce193100008900619966") else { return }
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             if let data = data {
                 if let res = try? JSONDecoder().decode(Arka.self, from: data) {
                     print("interactor \(res)")
-                      
+                    self.remoteRequestHandler?.remoteDataManagerCallBackData(with: res)
                 } else {
                     print("Invalid Response")
                 }

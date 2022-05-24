@@ -12,6 +12,7 @@ import UIKit
 protocol TableOneViewProtocol: class {
     // PRESENTER -> VIEW
     var presenter: TableOnePresenterProtocol? { get set }
+    func presenterPushDataView(received: [ArkaElement])
 }
 
 protocol TableOneWireFrameProtocol: class {
@@ -30,6 +31,7 @@ protocol TableOnePresenterProtocol: class {
 
 protocol TableOneInteractorOutputProtocol: class {
 // INTERACTOR -> PRESENTER
+    func interPushDataPresenter(receivedData: [ArkaElement])
 }
 
 protocol TableOneInteractorInputProtocol: class {
@@ -43,6 +45,7 @@ protocol TableOneInteractorInputProtocol: class {
 
 protocol TableOneDataManagerInputProtocol: class {
     // INTERACTOR -> DATAMANAGER
+
 }
 
 protocol TableOneRemoteDataManagerInputProtocol: class {
@@ -53,6 +56,7 @@ protocol TableOneRemoteDataManagerInputProtocol: class {
 
 protocol TableOneRemoteDataManagerOutputProtocol: class {
     // REMOTEDATAMANAGER -> INTERACTOR
+    func remoteDataManagerCallBackData(with Arka: [ArkaElement])
 }
 
 protocol TableOneLocalDataManagerInputProtocol: class {

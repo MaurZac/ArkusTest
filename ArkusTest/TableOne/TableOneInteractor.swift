@@ -15,11 +15,20 @@ class TableOneInteractor: TableOneInteractorInputProtocol {
     var localDatamanager: TableOneLocalDataManagerInputProtocol?
     var remoteDatamanager: TableOneRemoteDataManagerInputProtocol?
     
+    var dataResponse = [ArkaElement]()
+    
     func getData() {
         remoteDatamanager?.externalGetData()
     }
+    
 }
 
 extension TableOneInteractor: TableOneRemoteDataManagerOutputProtocol {
+    
+    func remoteDataManagerCallBackData(with Arka: [ArkaElement]) {
+        dataResponse = Arka
+        presenter?.interPushDataPresenter(receivedData: dataResponse)
+    }
+    
     // TODO: Implement use case methods
 }
