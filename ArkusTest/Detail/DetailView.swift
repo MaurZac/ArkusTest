@@ -81,6 +81,13 @@ class DetailView: UIViewController, CLLocationManagerDelegate, GMSMapViewDelegat
        return tableD
     }()
     
+    let sepaVi: UIView = {
+        let sepaVi = UIView()
+        sepaVi.backgroundColor = UIColor(named: "addressColor")
+        return sepaVi
+    }()
+    
+    
     // MARK: Lifecycle
 
     override func viewDidLoad() {
@@ -143,7 +150,6 @@ class DetailView: UIViewController, CLLocationManagerDelegate, GMSMapViewDelegat
         view.addSubview(petlbl)
         
         
-        
         mapConstainer.topAnchor.constraint(equalTo: view.topAnchor, constant: 70).isActive = true
         mapConstainer.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
         mapConstainer.heightAnchor.constraint(equalToConstant: 160).isActive = true
@@ -185,6 +191,8 @@ class DetailView: UIViewController, CLLocationManagerDelegate, GMSMapViewDelegat
         petlbl.widthAnchor.constraint(equalToConstant: 90).isActive = true
         petlbl.heightAnchor.constraint(equalToConstant: 20).isActive = true
         
+       
+        
     }
     
     func configNavBarDetail() {
@@ -207,7 +215,7 @@ extension DetailView: DetailViewProtocol {
         if data.isPetFriendly {
             petlbl.textColor = .systemGreen
         }else{
-            petlbl.textColor = .lightGray
+            petlbl.textColor = .systemRed
         }
     }
 }

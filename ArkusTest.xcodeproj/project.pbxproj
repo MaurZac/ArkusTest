@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C51D89FF2839E997009AB99E /* TableInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51D89FE2839E997009AB99E /* TableInteractor.swift */; };
-		C51D8A012839E9BF009AB99E /* TablePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51D8A002839E9BF009AB99E /* TablePresenter.swift */; };
-		C51D8A032839E9CA009AB99E /* TableEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51D8A022839E9CA009AB99E /* TableEntity.swift */; };
-		C51D8A052839E9D6009AB99E /* TableRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51D8A042839E9D6009AB99E /* TableRouter.swift */; };
 		C51D8A0F2839FD76009AB99E /* TableOnePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51D8A082839FD76009AB99E /* TableOnePresenter.swift */; };
 		C51D8A102839FD76009AB99E /* TableOneLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51D8A092839FD76009AB99E /* TableOneLocalDataManager.swift */; };
 		C51D8A112839FD76009AB99E /* TableOneProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51D8A0A2839FD76009AB99E /* TableOneProtocols.swift */; };
@@ -31,17 +27,12 @@
 		C51D8A2D283DB0F4009AB99E /* DetailView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C51D8A2C283DB0F4009AB99E /* DetailView.storyboard */; };
 		C5D43E372839C7300050745F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D43E362839C7300050745F /* AppDelegate.swift */; };
 		C5D43E392839C7300050745F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D43E382839C7300050745F /* SceneDelegate.swift */; };
-		C5D43E3B2839C7300050745F /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D43E3A2839C7300050745F /* TableView.swift */; };
 		C5D43E402839C7310050745F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5D43E3F2839C7310050745F /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		18B5C60125009A8ABF7DE1CD /* Pods-ArkusTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArkusTest.release.xcconfig"; path = "Target Support Files/Pods-ArkusTest/Pods-ArkusTest.release.xcconfig"; sourceTree = "<group>"; };
 		9A162AC0B77B86E3C077B789 /* Pods-ArkusTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArkusTest.debug.xcconfig"; path = "Target Support Files/Pods-ArkusTest/Pods-ArkusTest.debug.xcconfig"; sourceTree = "<group>"; };
-		C51D89FE2839E997009AB99E /* TableInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableInteractor.swift; sourceTree = "<group>"; };
-		C51D8A002839E9BF009AB99E /* TablePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TablePresenter.swift; sourceTree = "<group>"; };
-		C51D8A022839E9CA009AB99E /* TableEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableEntity.swift; sourceTree = "<group>"; };
-		C51D8A042839E9D6009AB99E /* TableRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableRouter.swift; sourceTree = "<group>"; };
 		C51D8A082839FD76009AB99E /* TableOnePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableOnePresenter.swift; sourceTree = "<group>"; };
 		C51D8A092839FD76009AB99E /* TableOneLocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableOneLocalDataManager.swift; sourceTree = "<group>"; };
 		C51D8A0A2839FD76009AB99E /* TableOneProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableOneProtocols.swift; sourceTree = "<group>"; };
@@ -63,7 +54,6 @@
 		C5D43E332839C7300050745F /* ArkusTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArkusTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5D43E362839C7300050745F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5D43E382839C7300050745F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C5D43E3A2839C7300050745F /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 		C5D43E3F2839C7310050745F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C5D43E442839C7310050745F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,26 +83,6 @@
 			children = (
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C51D89FD2839E915009AB99E /* Table */ = {
-			isa = PBXGroup;
-			children = (
-				C51D8A062839EAAA009AB99E /* CustomCell */,
-				C5D43E3A2839C7300050745F /* TableView.swift */,
-				C51D89FE2839E997009AB99E /* TableInteractor.swift */,
-				C51D8A002839E9BF009AB99E /* TablePresenter.swift */,
-				C51D8A022839E9CA009AB99E /* TableEntity.swift */,
-				C51D8A042839E9D6009AB99E /* TableRouter.swift */,
-			);
-			path = Table;
-			sourceTree = "<group>";
-		};
-		C51D8A062839EAAA009AB99E /* CustomCell */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CustomCell;
 			sourceTree = "<group>";
 		};
 		C51D8A072839EB02009AB99E /* Detail */ = {
@@ -177,7 +147,6 @@
 			isa = PBXGroup;
 			children = (
 				C51D8A162839FD84009AB99E /* TableOne */,
-				C51D89FD2839E915009AB99E /* Table */,
 				C51D8A072839EB02009AB99E /* Detail */,
 				C5D43E362839C7300050745F /* AppDelegate.swift */,
 				C5D43E382839C7300050745F /* SceneDelegate.swift */,
@@ -302,27 +271,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5D43E3B2839C7300050745F /* TableView.swift in Sources */,
 				C5D43E372839C7300050745F /* AppDelegate.swift in Sources */,
 				C51D8A132839FD76009AB99E /* TableOneView.swift in Sources */,
-				C51D8A012839E9BF009AB99E /* TablePresenter.swift in Sources */,
 				C51D8A152839FD76009AB99E /* TableOneWireFrame.swift in Sources */,
 				C51D8A122839FD76009AB99E /* TableOneInteractor.swift in Sources */,
 				C51D8A2B283D8E5F009AB99E /* DetailWireFrame.swift in Sources */,
 				C51D8A1D283B403D009AB99E /* TableOneEntity.swift in Sources */,
 				C51D8A112839FD76009AB99E /* TableOneProtocols.swift in Sources */,
 				C51D8A27283D8E5F009AB99E /* DetailProtocols.swift in Sources */,
-				C51D8A032839E9CA009AB99E /* TableEntity.swift in Sources */,
 				C51D8A29283D8E5F009AB99E /* DetailView.swift in Sources */,
 				C51D8A142839FD76009AB99E /* TableOneRemoteDataManager.swift in Sources */,
 				C51D8A28283D8E5F009AB99E /* DetailInteractor.swift in Sources */,
 				C51D8A0F2839FD76009AB99E /* TableOnePresenter.swift in Sources */,
-				C51D8A052839E9D6009AB99E /* TableRouter.swift in Sources */,
 				C5D43E392839C7300050745F /* SceneDelegate.swift in Sources */,
 				C51D8A1B283B3B91009AB99E /* TableOneViewCell.swift in Sources */,
 				C51D8A26283D8E5F009AB99E /* DetailLocalDataManager.swift in Sources */,
 				C51D8A2A283D8E5F009AB99E /* DetailRemoteDataManager.swift in Sources */,
-				C51D89FF2839E997009AB99E /* TableInteractor.swift in Sources */,
 				C51D8A102839FD76009AB99E /* TableOneLocalDataManager.swift in Sources */,
 				C51D8A25283D8E5F009AB99E /* DetailPresenter.swift in Sources */,
 			);
