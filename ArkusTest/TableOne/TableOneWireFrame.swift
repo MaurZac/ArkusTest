@@ -38,4 +38,12 @@ class TableOneWireFrame: TableOneWireFrameProtocol {
         return UIStoryboard(name: "TableOne", bundle: Bundle.main)
     }
     
+    func presentNewViewDetail(from view: TableOneViewProtocol, withData: ArkaElement) {
+        //crear nuevo modulo y llamado
+        let newDetailView = DetailWireFrame.createDetailModule(with: withData)
+        if let newView =  view as? UIViewController{
+            newView.navigationController?.pushViewController(newDetailView, animated: true)
+        }
+    }
+    
 }

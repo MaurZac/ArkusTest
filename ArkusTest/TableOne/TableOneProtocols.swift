@@ -18,6 +18,7 @@ protocol TableOneViewProtocol: class {
 protocol TableOneWireFrameProtocol: class {
     // PRESENTER -> WIREFRAME
     static func createTableOneModule() -> UIViewController
+    func presentNewViewDetail(from view: TableOneViewProtocol, withData: ArkaElement )
 }
 
 protocol TableOnePresenterProtocol: class {
@@ -25,8 +26,8 @@ protocol TableOnePresenterProtocol: class {
     var view: TableOneViewProtocol? { get set }
     var interactor: TableOneInteractorInputProtocol? { get set }
     var wireFrame: TableOneWireFrameProtocol? { get set }
-    
     func viewDidLoad()
+    func showDetailView(with data: ArkaElement)
 }
 
 protocol TableOneInteractorOutputProtocol: class {

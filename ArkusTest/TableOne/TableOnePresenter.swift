@@ -18,10 +18,14 @@ class TableOnePresenter  {
 }
 
 extension TableOnePresenter: TableOnePresenterProtocol {
+   
+    
     // TODO: implement presenter methods
     func viewDidLoad() {
-        print("heydesdeelpresenter")
         interactor?.getData()
+    }
+    func showDetailView(with data: ArkaElement) {
+        wireFrame?.presentNewViewDetail(from: view!, withData: data)
     }
 }
 
@@ -29,6 +33,7 @@ extension TableOnePresenter: TableOneInteractorOutputProtocol {
     // TODO: implement interactor output methods
     func interPushDataPresenter(receivedData: [ArkaElement]) {
         view?.presenterPushDataView(received: receivedData)
+        
     }
     
 }

@@ -18,7 +18,6 @@ class TableOneRemoteDataManager:TableOneRemoteDataManagerInputProtocol {
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             if let data = data {
                 if let res = try? JSONDecoder().decode(Arka.self, from: data) {
-                    print("interactor \(res)")
                     self.remoteRequestHandler?.remoteDataManagerCallBackData(with: res)
                 } else {
                     print("Invalid Response")
