@@ -19,6 +19,9 @@ class TableOneView: UIViewController, UITableViewDataSource, UITableViewDelegate
     
     var presenter: TableOnePresenterProtocol?
     var datResView = [ArkaElement]()
+    var usrLat = 0.0
+    var usrLon = 0.0
+    var totalDistance = 0.0
     
     let tableV: UITableView = {
        let tableV = UITableView()
@@ -38,7 +41,6 @@ class TableOneView: UIViewController, UITableViewDataSource, UITableViewDelegate
         tableV.layoutMargins = UIEdgeInsets.zero
         tableV.separatorInset = UIEdgeInsets.zero
         presenter?.viewDidLoad()
-        self.updateViewConstraints()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -64,6 +66,7 @@ class TableOneView: UIViewController, UITableViewDataSource, UITableViewDelegate
           }
       }
       
+   
       func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
           let userLocation:CLLocation = locations[0] as CLLocation
           
@@ -71,10 +74,21 @@ class TableOneView: UIViewController, UITableViewDataSource, UITableViewDelegate
           // other wise this function will be called every time when user location changes.
           
          // manager.stopUpdatingLocation()
-          
+          usrLat = userLocation.coordinate.latitude
+          usrLon = userLocation.coordinate.longitude
           print("user latitude = \(userLocation.coordinate.latitude)")
           print("user longitude = \(userLocation.coordinate.longitude)")
       }
+    
+    func calculateDistance(userLon: Double, userLat: Double, destineLon: Double, destineLat: Double){
+        let coordinate0 = CLLocation(latitude: userLat, longitude: userLon)
+        let coordinate1 = CLLocation(latitude: destineLat, longitude: destineLon)
+        let distanceIn = coordinate0.distance(from: coordinate1)
+        let res = distanceIn / 1000
+        let roundedDistance = Double(res).rounded(toPlaces: 1)
+        totalDistance = roundedDistance
+        print("distancia \(roundedDistance)")
+    }
       
       func locationManager(_ manager: CLLocationManager, didFailWithError error: Error)
       {
@@ -102,6 +116,8 @@ class TableOneView: UIViewController, UITableViewDataSource, UITableViewDelegate
                 cell.petlbl.textColor = UIColor(named: "addressColor")
             }
         }
+        calculateDistance(userLon: usrLon, userLat: usrLat, destineLon: datResView[indexPath.row].longitude, destineLat: datResView[indexPath.row].latitude)
+        cell.distancelbl.text = "\(totalDistance) Km"
         cell.layoutMargins = UIEdgeInsets.zero
         cell.selectionStyle = .none
         return cell
@@ -174,7 +190,13 @@ extension UIImageView {
         downloaded(from: url, contentMode: mode)
     }
 }
-
+extension Double {
+    /// Rounds the double to decimal places value
+    func rounded(toPlaces places:Int) -> Double {
+        let divisor = pow(10.0, Double(places))
+        return (self * divisor).rounded() / divisor
+    }
+}
 
 
 

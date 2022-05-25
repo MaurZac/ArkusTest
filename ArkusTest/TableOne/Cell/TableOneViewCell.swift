@@ -114,8 +114,8 @@ class TableOneViewCell: UITableViewCell {
         adddressLabel2.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
         distancelbl.topAnchor.constraint(equalTo: contentView.topAnchor, constant: -5).isActive = true
-        distancelbl.leadingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -50).isActive = true
-        distancelbl.widthAnchor.constraint(equalToConstant: 40).isActive = true
+        distancelbl.leadingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -55).isActive = true
+        distancelbl.widthAnchor.constraint(equalToConstant: 60).isActive = true
         distancelbl.heightAnchor.constraint(equalToConstant: 50).isActive = true
       
         petImg.topAnchor.constraint(equalTo: distancelbl.topAnchor, constant: 40).isActive = true
