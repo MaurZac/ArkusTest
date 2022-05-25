@@ -20,7 +20,11 @@ class DetailPresenter: DetailPresenterProtocol  {
     var wireFrame: DetailWireFrameProtocol?
     var datoArkaReceived: ArkaElement?
     func viewDidLoad() {
-        print("Hola desde el presenter y tengo el dato \(datoArkaReceived)")
+        print("Hola desde el presenter y tengo el dato \(String(describing: datoArkaReceived))")
+        if let datoArkaReceived = datoArkaReceived {
+            view?.showDataInLabel(data: datoArkaReceived)
+        }
+       
     }
 }
 

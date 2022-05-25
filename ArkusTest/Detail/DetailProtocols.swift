@@ -12,6 +12,7 @@ import UIKit
 protocol DetailViewProtocol: class {
     // PRESENTER -> VIEW
     var presenter: DetailPresenterProtocol? { get set }
+    func showDataInLabel(data: ArkaElement)
 }
 
 protocol DetailWireFrameProtocol: class {
